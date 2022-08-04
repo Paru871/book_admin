@@ -1,24 +1,17 @@
-# README
+# README(パ Rails 輪読会第 2 章コード確認用)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+)
 
-Things you may want to cover:
+## ドライバーさんの操作手順
 
-* Ruby version
+- PC 内の都合の良い場所で下記のコマンドを入力、ファイルをクローンしてコードをダウンロードする
 
-* System dependencies
+```
+$ git clone https://github.com/Paru871/book_admin.git
+```
 
-* Configuration
+- ダウンロードできたら、ディレクトリ`book_admin`を VSCode などで開いて、下記のコマンドで DB が初期状態となり、seed に入れたデータが入る(現在 Publisher が 1 件)
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+$ rails db:reset
+```
