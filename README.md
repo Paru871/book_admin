@@ -16,3 +16,5 @@ $ yarn
 $ bin/setup
 $ rails db:reset
 ```
+
+- その後、`rails s`して Rails を起動する。
