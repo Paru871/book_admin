@@ -10,8 +10,11 @@
 $ git clone https://github.com/Paru871/book_admin.git
 ```
 
-- ダウンロードできたら、ディレクトリ`book_admin`を VSCode などで開いて、下記のコマンドで DB が初期状態となり、seed に入れたデータが入る(現在 Publisher が 1 件)
+- ダウンロードできたら、ディレクトリ`book_admin`を VSCode などで開いて、下記のコマンドを 1 つずつ入力、これにより DB が初期状態となり、seed に入れたデータが入る(現在 Publisher が 1 件)
 
 ```
+$ bundle
+$ yarn
+$ bin/setup
 $ rails db:reset
 ```
