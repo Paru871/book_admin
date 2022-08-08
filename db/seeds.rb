@@ -7,3 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Publisher.create(name: "ABC", address: "Tokyo")
+Book.create(name: "We Love Dog", publisher: Publisher.find(1), price: 999)
