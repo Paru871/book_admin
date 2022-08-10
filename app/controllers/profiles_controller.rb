@@ -6,5 +6,23 @@ class ProfilesController < ApplicationController
   end
 
   def update
+    user = current_user
+    # params[:user] => {name:"bob", email:"bob@example.com"}
+    user.update(params[:user])
+  end
+
+  private
+
+  #外部から渡されるパラメータをそのまま信用せず、明示的に許可したキーのみ利用する。
+  # def user_params
+  #   params.require(:user).permit(:name, :email)
+  # end
+
+  def user_params
+    if current_user.admin?
+      params.require(:user).permit(:name, :email, :admin)
+    else
+      params.require(:user).permit(:name, :email)
+    end
   end
 end

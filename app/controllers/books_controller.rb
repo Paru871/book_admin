@@ -4,10 +4,12 @@ class BooksController < ApplicationController
   around_action :action_logger, only: [:destroy]
 
   def show
-    respond_to do |format|
-      format.html
-      format.json
-    end
+    # respond_to do |format|
+    #   format.html {redirect_to profile_path}
+    #   # format.json {render json: @book}
+    # end
+    render :show
+    # redirect_to profile_path, status: 302
   end
 
   def destroy
