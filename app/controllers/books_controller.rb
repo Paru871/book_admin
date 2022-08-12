@@ -8,8 +8,14 @@ class BooksController < ApplicationController
     #   format.html {redirect_to profile_path}
     #   # format.json {render json: @book}
     # end
-    render :show
+    # render :show
     # redirect_to profile_path, status: 302
+    respond_to do |format|
+      format.html do |html|
+        html.mobile {redirect_to profile_path}
+      end
+      format.json {render json: @book}
+    end
   end
 
   def destroy
